@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.scijava</groupId>
+		<artifactId>pom-scijava</artifactId>
+		<version>36.0.0</version>
+	</parent>
+
+	<groupId>org.janelia</groupId>
+	<artifactId>n5-inspector</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<name>N5 Inspector</name>
+	<description>Inspector for NGFF-style containers supported by the N5 API (N5, HDF5, OME-Zarr)</description>
+	<url>https://github.com/JaneliaSciComp/n5-inspector</url>
+	<inceptionYear>2023</inceptionYear>
+	<organization>
+		<name>Janelia Research Campus</name>
+		<url>http://janelia.org/</url>
+	</organization>
+	<licenses>
+		<license>
+			<name>BSD 3-Clause "New" or "Revised" License</name>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>krokicki</id>
+			<name>Konrad Rokicki</name>
+		</developer>
+		<developer>
+			<id>axtimwalde</id>
+			<name>Stephan Saalfeld</name>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git://github.com/JaneliaSciComp/n5-inspector</connection>
+		<developerConnection>scm:git:git://github.com/JaneliaSciComp/n5-inspector</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/JaneliaSciComp/n5-inspector</url>
+	</scm>
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/JaneliaSciComp/n5-inspector/issues</url>
+	</issueManagement>
+	<ciManagement>
+		<system>GitHub Actions</system>
+		<url>https://github.com/JaneliaSciComp/n5-inspector/actions</url>
+	</ciManagement>
+
+	<properties>
+		<package-name>org.janelia.n5.inspector</package-name>
+		<license.licenseName>BSD-3-Clause</license.licenseName>
+		<license.projectName>N5 Inspector</license.projectName>
+		<license.organizationName>Janelia Research Campus</license.organizationName>
+		<license.excludes>src/main/java/org/fife/**</license.excludes>
+
+		<n5.version>3.0.2</n5.version>
+		<n5-hdf5.version>2.0.1</n5-hdf5.version>
+		<n5-google-cloud.version>4.0.0</n5-google-cloud.version>
+		<n5-aws-s3.version>4.0.1</n5-aws-s3.version>
+		<n5-ij.version>3.2.6</n5-ij.version>
+		<n5-zarr.version>1.0.1</n5-zarr.version>
+		<n5-imglib2.version>7.0.0</n5-imglib2.version>
+		<n5-universe.version>1.1.0</n5-universe.version>
+		<bigdataviewer-core.version>10.4.8</bigdataviewer-core.version>
+
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>sc.fiji</groupId>
+			<artifactId>bigdataviewer_fiji</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>sc.fiji</groupId>
+			<artifactId>bigdataviewer-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>sc.fiji</groupId>
+			<artifactId>bigdataviewer-vistools</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.scijava</groupId>
+			<artifactId>ui-behaviour</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>net.imglib2</groupId>
+			<artifactId>imglib2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>net.imglib2</groupId>
+			<artifactId>imglib2-cache</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.janelia.saalfeldlab</groupId>
+			<artifactId>n5</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.janelia.saalfeldlab</groupId>
+			<artifactId>n5-imglib2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.janelia.saalfeldlab</groupId>
+			<artifactId>n5-ij</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.janelia.saalfeldlab</groupId>
+			<artifactId>n5-universe</artifactId>
+			<version>${n5-universe.version}</version>
+		</dependency>
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>scijava.public</id>
+			<url>https://maven.scijava.org/content/groups/public</url>
+		</repository>
+	</repositories>
+
+</project>
